@@ -1,0 +1,17 @@
+<%-include('partials/header.ejs')%>
+<h1 style="font-family: 'Titan One', cursive;">Home</h1>
+<p><%=home%></p>
+<hr style="margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);">
+  <h2 style="font-family: 'Titan One', cursive;">Blog Posts</h2>
+ <%posts.forEach((post)=>{%>
+   <h1><%=post.title%></h1>
+   <%if(post.content.length>100){%>
+     <p><%=post.content.substring(0,100) + "..."%><span><a href="http://localhost:3000/posts/<%=post.title%>">read more</a></span></p>
+   <%}else{%>
+     <p><%=post.content%></p>
+   <%}%>
+ <%})%>
+<%-include('partials/footer.ejs')%>

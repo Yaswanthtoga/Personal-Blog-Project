@@ -1,0 +1,21 @@
+<%-include('partials/header.ejs')%>
+<h1  style="font-family: 'Titan One', cursive;">Contact</h1>
+<br>
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label><br>
+      <input style="width:600px; display:inline-block;" type="email" class="form-control" id="fname" placeholder="First Name">
+      <input style="width:530px; display:inline-block;" type="email" class="form-control" id="sname" placeholder="Last Name">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Email">
+    </div>
+    <textarea class="form-control" rows="7" id="text"  placeholder="Message"></textarea><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="/js/script.js" charset="utf-8"></script>
+<%-include('partials/footer.ejs')%>
